@@ -9,7 +9,7 @@ if face_ref.empty():
     exit()
 
 # buka kamera
-camera = cv2.VideoCapture(1)
+camera = cv2.VideoCapture(0)
 
 # mengecek apakah kamera sudah terbuka
 if not camera.isOpened():
@@ -29,7 +29,7 @@ def face_detection(frame):
         gray_frame,
         scaleFactor=1.1,
         minNeighbors=5,
-        minSize=(100, 100)  # Ubah jika perlu
+        minSize=(50, 50)  # Ubah jika perlu
     )
     return faces
 
